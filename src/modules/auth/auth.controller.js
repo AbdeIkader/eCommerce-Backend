@@ -6,7 +6,7 @@ import bcrypt from "bcrypt";
 
 const signUp = catchAsyncError(async (req, res, next) => {
   // console.log(req.body.email);
-  let isUserExist = await userModel.findOne({ email: req.bodyس.email });
+  let isUserExist = await userModel.findOne({ email: req.body.email });
   if (isUserExist) {
     return next(new AppError("Account is already exist!", 409));
   }
