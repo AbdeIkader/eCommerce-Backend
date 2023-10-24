@@ -12,7 +12,6 @@ export class ApiFeatures {
     const PAGE_SKIP = (PAGE_NUMBER - 1) * PAGE_LIMIT; //2*3
 
     this.mongooseQuery.skip(PAGE_SKIP).limit(PAGE_LIMIT);
-    console.log(this);
     return this;
   }
 
@@ -69,10 +68,10 @@ export class ApiFeatures {
 
   fields() {
     if (this.queryString.fields) {
-      console.log(this.queryString.fields);
+      // console.log(this.queryString.fields);
       let fields = this.queryString.fields.split(",").join(" ");
       console.log(fields);
-      this.mongooseQuery.select(fields);
+      // this.mongooseQuery.select(fields);
     }
     return this;
   }
