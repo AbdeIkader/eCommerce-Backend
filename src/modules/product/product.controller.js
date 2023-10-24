@@ -6,7 +6,7 @@ import { productModel } from "./../../../Database/models/product.model.js";
 import { ApiFeatures } from "../../utils/ApiFeatures.js";
 
 const addProduct = catchAsyncError(async (req, res, next) => {
-  console.log(req.files);
+  // console.log(req.files);
   req.body.imgCover = req.files.imgCover[0].filename;
   req.body.images = req.files.images.map((ele) => ele.filename);
 

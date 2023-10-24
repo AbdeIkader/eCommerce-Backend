@@ -156,7 +156,7 @@ async function card (e,res){
 
     await productModel.bulkWrite(options);
 
-    await cartModel.findByIdAndDelete({userId: user._id});
+    await cartModel.findOneAndDelete({userId: user._id});
 
     return res.status(201).json({ message: "success", order });
   } else {
