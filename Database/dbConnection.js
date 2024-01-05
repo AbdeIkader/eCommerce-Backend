@@ -10,3 +10,7 @@ export function dbConnection() {
       console.log("DB Failed to connect", error);
     });
 }
+
+
+//Use this is postman https://ecommerce-backend-codv.onrender.com/api/v1/auth/signup
+

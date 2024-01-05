@@ -36,6 +36,7 @@ const userSchema = new Schema(
       type: Boolean,
       default: false,
     },
+    
     wishlist:[{type:Schema.ObjectId,ref : 'product'}],
     addresses:[{
       city:String,
